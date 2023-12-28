@@ -74,14 +74,18 @@ header img {
     height: 2.5vmin;
 }
 
+.header-title {
+    position: absolute;
+    top: 27vh;
+}
+
 .header-side-title {
     font-family: "Affect_bold", serif;
-    font-size: 17vmin;
+    font-size: 10vmax;
     color: white;
     //position: absolute;
-    margin-top: 30%;
-    height: 30%;
-
+    //margin-top: 30%;
+    line-height: 100%;
 }
 
 .header-side-title.left-side {
@@ -94,7 +98,7 @@ header img {
 
 .header-left-side-subtitle {
     font-family: "Affect_bold", serif;
-    font-size: 2.25vmin;
+    font-size: 1.25vmax;
     width: 60%;
     color: white;
     text-transform: uppercase;
@@ -102,7 +106,7 @@ header img {
 
 .header-right-side-subtitle {
     font-family: "Affect_light", serif;
-    font-size: 4vmin;
+    font-size: 1.4vmax;
     font-weight: 300;
     //width: 60%;
     color: white;
