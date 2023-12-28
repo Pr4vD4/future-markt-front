@@ -11934,6 +11934,10 @@ header img {
   color: #FFDE9F !important;
 }
 
+.header-localization {
+  text-transform: uppercase;
+}
+
 .header-localization-rectangle {
   height: 1vmin;
   width: 1vmin;
