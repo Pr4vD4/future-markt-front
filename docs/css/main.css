@@ -11855,6 +11855,21 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+@font-face {
+  font-family: "Affect_bold";
+  src: url("../fonts/affect_bold.otf");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Affect_light";
+  src: url("../fonts/affect_light.otf");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "PP Neue Montreal Mono";
+  src: url("../fonts/pp-neue-montreal-mono-book.otf");
+  font-weight: 500;
+}
 header {
   height: 100vh;
   width: 100vw;
@@ -11866,13 +11881,101 @@ header .content {
   position: absolute;
   height: 100%;
   width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 header img {
   height: 100%;
   max-width: 100%;
   object-fit: cover;
+}
+
+.header-top-part {
+  width: 85%;
+  height: 70%;
+}
+
+.header-bottom-part {
+  width: 85%;
+  height: 30%;
+}
+
+.header-right-side {
+  width: 36%;
+}
+
+.header-left-side {
+  width: 40%;
+}
+
+.header-top-part .nav-link {
+  font-family: "PP Neue Montreal Mono", serif;
+  font-size: 2vmin;
+  color: white;
+}
+
+.header-bottom-part .nav-link {
+  font-family: "PP Neue Montreal Mono", serif;
+  font-size: 6vmin;
+  color: white;
+  letter-spacing: -0.5vmin;
+  text-transform: uppercase;
+}
+
+.nav-link:hover {
+  color: white;
+}
+
+.nav-link-colored {
+  text-transform: uppercase;
+  color: #FFDE9F !important;
+}
+
+.nav-link-colored:hover {
+  color: #FFDE9F !important;
+}
+
+.header-localization-rectangle {
+  height: 1vmin;
+  width: 1vmin;
+  background: white;
+  border-radius: 10%;
+}
+
+.header-nav-link-arrow img {
+  margin-top: -4px;
+  height: 2.5vmin;
+}
+
+.header-side-title {
+  font-family: "Affect_bold", serif;
+  font-size: 17vmin;
+  color: white;
+  margin-top: 30%;
+  height: 30%;
+}
+
+.header-side-title.left-side {
+  margin-left: -1%;
+}
+
+.header-side-title.right-side {
+  margin-right: -1%;
+}
+
+.header-left-side-subtitle {
+  font-family: "Affect_bold", serif;
+  font-size: 2.25vmin;
+  width: 60%;
+  color: white;
+  text-transform: uppercase;
+}
+
+.header-right-side-subtitle {
+  font-family: "Affect_light", serif;
+  font-size: 4vmin;
+  font-weight: 300;
+  color: white;
+  text-transform: uppercase;
+  text-align: end;
+  letter-spacing: 1vmin;
 }

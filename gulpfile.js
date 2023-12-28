@@ -9,8 +9,8 @@ const clean = require('gulp-clean');
 const fs = require('fs');
 
 gulp.task('clean', function (done) {
-    if (fs.existsSync('./dist/')) {
-        return gulp.src('./dist/', {read: false})
+    if (fs.existsSync('./docs/')) {
+        return gulp.src('./docs/', {read: false})
             .pipe(clean());
     }
     console.log('dist directory not found');
@@ -23,22 +23,27 @@ gulp.task('html', function () {
             prefix: '@@',
             basepath: '@file'
         }))
-        .pipe(gulp.dest('./dist/'));
+        .pipe(gulp.dest('./docs/'));
 })
 
 gulp.task('sass', function () {
     return gulp.src('./src/scss/*.scss')
         .pipe(sass())
-        .pipe(gulp.dest('./dist/css/'));
+        .pipe(gulp.dest('./docs/css/'));
 });
 
-gulp.task('copyImages', function () {
+gulp.task('images', function () {
     return gulp.src('./src/img/**/*')
-        .pipe(gulp.dest('./dist/img/'));
+        .pipe(gulp.dest('./docs/img/'));
+})
+
+gulp.task('fonts', function () {
+    return gulp.src('./src/fonts/**/*')
+        .pipe(gulp.dest('./docs/fonts/'));
 })
 
 gulp.task('server', function () {
-    return gulp.src('./dist/')
+    return gulp.src('./docs/')
         .pipe(server({
             livereload: true,
             open: true
@@ -48,11 +53,12 @@ gulp.task('server', function () {
 gulp.task('watch', function () {
     gulp.watch('./src/scss/**/*.scss', gulp.parallel('sass'))
     gulp.watch('./src/**/*.html', gulp.parallel('html'))
-    gulp.watch('./src/img/**/*', gulp.parallel('copyImages'))
+    gulp.watch('./src/img/**/*', gulp.parallel('images'))
+    gulp.watch('./src/fonts/**/*', gulp.parallel('fonts'))
 })
 
 gulp.task('default', gulp.series(
     'clean',
-    gulp.parallel('html', 'sass', 'copyImages'),
+    gulp.parallel('html', 'sass', 'images', 'fonts'),
     gulp.parallel('server', 'watch')
 ));
