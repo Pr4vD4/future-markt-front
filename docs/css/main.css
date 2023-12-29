@@ -11875,12 +11875,17 @@ header {
   width: 100vw;
   background-color: black;
   position: relative;
+  z-index: 0;
 }
 
 header .content {
   position: absolute;
   height: 100%;
   width: 100%;
+}
+
+.content > * {
+  z-index: 4;
 }
 
 header img {
@@ -11915,7 +11920,7 @@ header img {
 
 .header-bottom-part .nav-link {
   font-family: "PP Neue Montreal Mono", serif;
-  font-size: 6vmin;
+  font-size: 3.25vmax;
   color: white;
   letter-spacing: -0.5vmin;
   text-transform: uppercase;
@@ -11960,6 +11965,7 @@ header img {
   font-size: 10vmax;
   color: white;
   line-height: 100%;
+  cursor: default;
 }
 
 .header-side-title.left-side {
@@ -11986,4 +11992,29 @@ header img {
   text-transform: uppercase;
   text-align: end;
   letter-spacing: 1vmin;
+}
+
+.noise {
+  top: 10%;
+  position: absolute;
+  width: 30vw;
+  height: 20vh;
+  z-index: 1;
+  opacity: 0;
+}
+
+.man {
+  z-index: 2;
+}
+
+.scrolling-text {
+  font-family: "PP Neue Montreal Mono", serif;
+  font-size: 3.75vmax;
+  color: white;
+  letter-spacing: -0.5vmin;
+  text-transform: uppercase;
+  z-index: 1;
+  position: absolute;
+  top: 14%;
+  width: 25vw;
 }
