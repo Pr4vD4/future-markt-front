@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="./css/main.css">
+    @@include('blocks/meta.html')
+    @@include('blocks/links.html')
     <title>Document</title>
 </head>
 <body>
@@ -12,10 +13,7 @@
 @@include('blocks/header.html')
 
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
-<script src="./js/shuffleText.js"></script>
-<script src="./js/anime.min.js"></script>
-<script src="./js/index.js"></script>
+@@include('blocks/scripts.html')
+
 </body>
 </html>
