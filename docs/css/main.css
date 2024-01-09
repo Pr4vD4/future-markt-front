@@ -15685,7 +15685,7 @@ header img {
   position: absolute;
   height: 20vh;
   z-index: 1;
-  opacity: 0;
+  opacity: 1;
 }
 
 .left-noise {

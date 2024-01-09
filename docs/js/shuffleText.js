@@ -116,7 +116,7 @@ shuffleInit({
   class_name:'shuffle-text',
   onload: false,
   delay: true,
-  number_of_iterations: 15,
-  iteration_speed: 50,
-  displayed_speed: 50
+  number_of_iterations: 9,
+  iteration_speed: 30,
+  displayed_speed: 30
 })

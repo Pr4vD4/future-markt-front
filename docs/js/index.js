@@ -37,7 +37,7 @@ document.querySelectorAll('.shuffle-text').forEach((el) => {
         document.querySelector('marquee').remove()
         anime({
             targets: '.noise',
-            opacity: 0,
+            opacity: 1,
             duration: 399,
         })
     })
@@ -46,13 +46,13 @@ document.querySelectorAll('.shuffle-text').forEach((el) => {
         marquee.textContent = el.dataset.initialText;
         marquee.behavior = 'scroll';
         marquee.direction = 'right';
-        marquee.setAttribute('scrollamount', 40) ;
+        marquee.setAttribute('scrollamount', 25) ;
         marquee.className = 'scrolling-text';
         document.querySelector('header').append(marquee)
         anime({
             targets: '.noise',
-            opacity: 1,
-            duration: 400,
+            opacity: 0,
+            duration: 500,
         })
     })
 
