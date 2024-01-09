@@ -38,7 +38,7 @@ document.querySelectorAll('.shuffle-text').forEach((el) => {
         anime({
             targets: '.noise',
             opacity: 1,
-            duration: 399,
+            duration: 499,
         })
     })
     el.addEventListener('mouseover', () => {
